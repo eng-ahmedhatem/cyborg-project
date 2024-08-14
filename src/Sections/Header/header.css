@@ -1,0 +1,228 @@
+header{
+    position: relative;
+    z-index: 2;
+}
+header .container {
+    display: flex;
+    flex-direction: row;
+    padding:30px 0px;
+    align-items: center;
+    position: relative;
+}
+header .container .logo{
+    width: 25%;
+    border-right: 1px solid var(--text-normal);
+
+}
+header .container nav{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+header .container .toggleLink{
+    position: absolute;
+    transform: translateY(-0%);
+    right: 5%;
+display: none;
+width: 35px; 
+height: 20px;
+cursor: pointer;
+}
+header .container .toggleLink.active{
+    transform: translateY(40%);
+ 
+
+}
+header .container  .toggleLink span{
+    display: block;
+    transition: var(--main-transition);
+background-color: red;
+width: 80%;
+border-radius: 20px;
+height: 1px;
+}
+
+header .container  .toggleLink span:nth-child(2){
+width: 100%;
+}
+header .container  .toggleLink.active span:nth-child(2){
+animation: fade-out var(--main-transition) 1  forwards  ;
+}
+header .container  .toggleLink.active span:nth-child(1){
+    width: 100%;
+    transform: translate(0px) rotate(45deg);
+}
+header .container  .toggleLink.active span:nth-child(3){
+    width: 100%;
+    /* margin-top: 16px; */
+    transform: translate(0px,-18px) rotate(-45deg);
+
+}
+header .container nav .search {
+position: relative;
+margin-left: 15px;
+
+}
+header .container nav .search label{
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+header .container nav .search label svg {
+    color: var(--text-normal);
+    font-size: 20px;
+    cursor: pointer;
+}
+header .container nav input{
+    width: 236px;
+    border-radius: 20px;
+    height: 46px;
+    background-color: var(--secondary_2-bg);
+    border: none;
+    padding-left:50px;
+    color: var(--text-p);
+    color: var(--text-normal);
+    caret-color: var(--text-normal);
+}
+header .container nav ul{
+    display: flex;
+    align-items: center;
+    transition: var(--main-transition);
+}
+header .container nav ul li a{
+    transition: var(--main-transition);
+    text-transform: capitalize;
+    font-size: var(--text-small);
+}
+header .container nav ul li:not(:last-child) a{
+    display: inline-block;
+    padding-right: 41px;
+    color: var(--text-normal);
+}
+header .container nav ul li.active:not(:last-child) a{
+    color: var(--text-color);
+}
+header .container nav ul li:not(:last-child) a:hover{
+    color: var(--text-color);
+}
+header .container nav ul li:last-child a{
+    background-color: var(--secondary_2-bg);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 20px;
+}
+header .container nav ul li.active:last-child a{
+    background-color: var(--secondary_3-bg);
+
+}
+header .container nav ul li.active:last-child a span{
+color:var(--text-light)
+}
+header .container nav ul li:last-child a:hover{
+background-color: var(--secondary_3-bg);
+}
+header .container nav ul li:last-child a:hover span{
+color:var(--text-light)
+}
+header .container nav ul li:last-child a span{
+color: var(--text-normal);
+margin:0 10px;
+}
+header .container nav ul li:last-child a img{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+@media (max-width:1000px) {
+    header {
+        background-color: var(--secondary_2-bg);
+    }
+    header .container {
+        padding: 15px 10px ;
+    }
+    header .container .logo{
+        
+        border-right:   none !important;
+    }
+
+    .search {
+        display: none;
+    }
+    .toggleLink {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    nav ul {
+        overflow: hidden;
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        top: 120%;
+        background-color: var(--main-bg);
+        z-index: 1;
+        transition:var(--main-transition);
+        display: none !important;
+
+    }
+    nav ul.show {
+        display: flex !important;
+        animation: nav_items var(--main-transition) 1 forwards;
+        
+
+    }
+    nav ul li{
+        border: 1px solid rgb(53, 57, 59);
+        width: 100%;
+        text-align: center;
+        border-inline: 1px solid var(--main-bg);
+    }
+    nav ul li.active{
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li:last-child img{
+        display: none;
+    }
+    nav ul li:last-child a{
+        background-color:inherit !important;
+        display: inline-block !important;
+        text-align: center;
+    }
+    nav ul li:last-child a span{
+        width: 100%;
+        margin: 0 !important;
+
+    }
+    nav ul li:last-child a:hover span{
+        color: var(--text-color) !important;
+    }
+    nav ul a{
+        width: 100%;
+        padding: 10px 20px !important;
+    }
+}
+@keyframes fade-out {
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes nav_items {
+    to {
+        opacity: 1;
+        top: 100%;
+    }
+}
+@keyframes nav_items-def {
+    to {
+        display: none !important;
+        opacity: 0;
+    }
+}

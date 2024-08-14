@@ -1,0 +1,30 @@
+.mainBanner{
+    background:url("../../Assets/imags/banner-bg.jpg") no-repeat ;
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    border-radius: 20px;
+    padding: 80px 60px;
+    margin-bottom: 50px;
+    
+}
+.mainBanner p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+.mainBanner h1 {
+    width: 50%;
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+.mainBanner h1 span {
+    color: var(--text-color);
+}
+/* ******** MostPopular ************ */
+.MostPopular{
+    background: var(--main-bg);
+    border-radius: 20px;
+    padding: 30px;
+}
