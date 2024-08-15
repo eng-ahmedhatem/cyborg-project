@@ -140,6 +140,10 @@ header .container nav ul li:last-child a img{
 @media (max-width:1000px) {
     header {
         background-color: var(--secondary_2-bg);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        
     }
     header .container {
         padding: 15px 10px ;

@@ -10,6 +10,7 @@
     --text-color:#ec6792;
     --text-light:#fff;
     --text-small:14px;
+    --sections-space:50px;
 }
 *{
     font-family: "Poppins", sans-serif;
@@ -30,19 +31,57 @@ button {
     border:  none ;
 
 }
+.cursor_grabbing{
+    cursor: grabbing;
+}
+section {
+    margin-bottom: var(--sections-space);
+    border-radius: 20px;
+}
+.SectionTitle{
+    font-size: 34px;
+    margin-bottom: 30px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+.SectionTitle .text_light{
+display: inline-block;
+margin-right: 10px;
+color: var(--text-light);
+text-decoration: underline;
+}
+.SectionTitle .text_color{
+color: var(--text-color);
+}
+@media (max-width:768px) {
+    .SectionTitle{
+        font-size: 25px;
+    }
+}
 .btn_compo{
     border-radius: 20px;
     text-transform: capitalize;
     transition: var(--main-transition);
     cursor: pointer;
+    font-size: 14px;
 
 }
 .btn_color{
     background: var(--secondary_3-bg);
-    color: var(--text-light
-    );
+    color: var(--text-light);
     font-size: 14px;
 
+}
+.btn_transparent_done{
+background: transparent;
+color: var(--text-normal);
+border: 1px solid var(--text-normal);
+}
+.btn_transparent{
+    background: transparent;
+    color: var(--bg-danger);
+    border: 1px solid var(--bg-danger);
+    font-weight: bold;
 }
 .btn_color:hover {
 background: var(--main-bg);
@@ -51,10 +90,11 @@ color: var(--text-color);
 }
 .container{
     margin: 0 auto; 
+    width: 90%;
 }
 @media (min-width:576px) {
     .container{
-        width: 540px;
+        width: 540px ;
     }
     
 }
@@ -85,4 +125,10 @@ main {
     background-color: var(--secondary_2-bg);
     border-radius: 30px;
     padding: 60px;
+}
+@media (max-width:768px) {
+    main{
+        margin: 110px auto 0 auto !important;
+        padding: 30px;
+    }
 }

@@ -3,6 +3,7 @@ import "./header.css";
 import logo from "../../Assets/imags/logo.png";
 import profileImg from "../../Assets/imags/profile-header.jpg";
 import { BsSearch } from "react-icons/bs";
+import { Link } from "react-router-dom";
 let Header = () => {
   let handel_toggleLink = e => {
     e.currentTarget.classList.toggle("active");
@@ -31,22 +32,22 @@ let Header = () => {
           </div>
           <ul className="nav-links">
             <li className="active">
-              <a href="">home</a>
+              <Link to="/">home</Link>
             </li>
             <li>
-              <a href="">browse</a>
+              <Link to="browse">browse</Link>
             </li>
             <li>
-              <a href="">details</a>
+              <Link to="details">details</Link>
             </li>
             <li>
-              <a href="">streams</a>
+              <Link to="streams">streams</Link>
             </li>
             <li>
-              <a href="">
+              <Link to="profile">
                 <span>profile</span>
                 <img src={profileImg} alt="" />
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

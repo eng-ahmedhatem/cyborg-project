@@ -1,16 +1,16 @@
 import React from 'react'
 import { BiBorderRadius, BiFontSize } from 'react-icons/bi'
 
-const BtnColor = (props) => {
+const BtnColor = (Props) => {
     const btnStyle = {
-        width:props.width,
-        height:props.height
+        width:Props.width,
+        height:Props.height
     
         
     }
   return (
-    <button style={btnStyle} className='btn_compo btn_color'>
-        {props.btnTitle}
+    <button style={btnStyle} className={`btn_compo ${Props.btnType}`}>
+        {Props.btnTitle}
     </button>
   )
 }
