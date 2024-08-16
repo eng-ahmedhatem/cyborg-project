@@ -66,6 +66,7 @@ flex-basis: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .MostPopular .Card .row-1 {
     color: var(--text-light);
@@ -120,10 +121,7 @@ flex-basis: 80%;
     align-items: center;
     padding: 20px 0;
 }
-.YourGaming .row div:first-child {
-    display: flex;
-    border: 1px solid #ffffff;
-}
+
 .YourGaming .row img {
     width: 100px;
     border-radius: 20px;

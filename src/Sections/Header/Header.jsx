@@ -12,6 +12,14 @@ let Header = () => {
     nav_links.classList.toggle("show");
 
   };
+  function handel_Nav_items (e) {
+    let nav_items_parent = document.querySelectorAll(".nav-links li")
+    nav_items_parent.forEach(li => {
+      li.classList.remove("active")
+    })
+    e.currentTarget.classList.add("active")
+    console.log(nav_items_parent)
+  }
   return (
     <header>
       <div className="container">
@@ -30,20 +38,20 @@ let Header = () => {
             </label>
             <input type="text" id="search" placeholder="type Something" />
           </div>
-          <ul className="nav-links">
-            <li className="active">
+          <ul className="nav-links" id="nav-links">
+            <li className="active" onClick={e=> handel_Nav_items(e)}>
               <Link to="/">home</Link>
             </li>
-            <li>
+            <li onClick={e=> handel_Nav_items(e)}>
               <Link to="browse">browse</Link>
             </li>
-            <li>
+            <li onClick={e=> handel_Nav_items(e)}>
               <Link to="details">details</Link>
             </li>
-            <li>
+            <li onClick={e=> handel_Nav_items(e)}>
               <Link to="streams">streams</Link>
             </li>
-            <li>
+            <li onClick={e=> handel_Nav_items(e)}>
               <Link to="profile">
                 <span>profile</span>
                 <img src={profileImg} alt="" />

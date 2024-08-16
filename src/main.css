@@ -6,10 +6,11 @@
     --secondary-bg:#181b1c;
     --secondary_2-bg:#1e2122;
     --secondary_3-bg:#8d1e3f;
-    --text-normal:#a8a083;
+    --text-normal:#747168;
     --text-color:#ec6792;
     --text-light:#fff;
     --text-small:14px;
+    --color-of-White:#e8e6dd;
     --sections-space:50px;
 }
 *{
@@ -47,7 +48,7 @@ section {
 .SectionTitle .text_light{
 display: inline-block;
 margin-right: 10px;
-color: var(--text-light);
+color: var(--color-of-White);
 text-decoration: underline;
 }
 .SectionTitle .text_color{
@@ -59,7 +60,7 @@ color: var(--text-color);
     }
 }
 .btn_compo{
-    border-radius: 20px;
+    border-radius: 30px;
     text-transform: capitalize;
     transition: var(--main-transition);
     cursor: pointer;

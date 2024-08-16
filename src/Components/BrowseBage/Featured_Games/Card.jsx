@@ -11,15 +11,16 @@ export default function Card(Props) {
         <div className="text">
             <div className="row-1">
                 <h4>{Props.title}</h4>
-                <span>
+            <p>{Props.download_text}</p>
+                
+            </div>
+            <div className="row-2">
+            <span>
                     <i>
                     <BsFillStarFill />
                     </i>
                     {Props.rating}
                 </span>
-            </div>
-            <div className="row-2">
-            <p>{Props.download_text}</p>
             <span>
                 <i>
                 <FaDownload />

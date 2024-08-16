@@ -1,14 +1,15 @@
 import React from 'react'
 import "./Browse.css"
-import {Featured_Games , TopDownloaded} from "../../Components/components_links"
+import {Featured_Games , TopDownloaded , StartStream , MostPopular_Live} from "../../Components/components_links"
 export default function Browse() {
   return (
     <section>
-            <div className="panner">
+            <section className="panner">
                 <Featured_Games/>
                 <TopDownloaded/>
-
-            </div>
+            </section>
+                <StartStream/>
+                <MostPopular_Live/>
     </section>
   )
 }

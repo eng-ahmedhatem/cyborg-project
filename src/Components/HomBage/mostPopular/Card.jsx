@@ -5,6 +5,7 @@ import { FaDownload } from "react-icons/fa";
 export default function Card(Props) {
   return (
     <div className='Card' id={Props.key}>
+        <img src={Props.img} alt="" />
         <div className="text">
             <div className="row-1">
                 <h4>{Props.title}</h4>
